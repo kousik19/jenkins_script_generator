@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title> Deployment Script Generator </title>
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+	
+		<table id="form">
+			
+		</table>
+		
+		<br /><br />
+		<center>
+			<button> Generate Script </button>
+		</center>
+		
+		<br /><br />
+		
+		<div class="result">
+		
+		
+		</div>
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		
+		<script>
+		
+		(function(){
+		
+		    console.log("Starting");
+		
+			var attributesCollection = [
+			
+				{"name" : "Project Name","type" : "text"},
+				{"name" : "Release No","type" : "text"},
+				{"name" : "Project Manager","type" : "text"},
+				{"name" : "Git URL","type" : "text"},
+				{"name" : "Branch","type" : "text"},
+				{"name" : "Email","type" : "text"},
+				{"name" : "Email Subject","type" : "text"},
+				{"name" : "Email Body","type" : "text"}
+				
+			];
+			
+			var html = "";
+			for(var i=0;i<attributesCollection.length;i=i+2)
+			{
+				html = html + "<tr>";
+				html = html + "<td><b> "+attributesCollection[i].name+" </b></td>";
+				html = html + "<td><b> "+attributesCollection[i+1].name+" </b></td>";
+				html = html + "</tr>";
+				
+				html = html + "<tr>";
+				html = html + "<td> &nbsp;&nbsp; <input name=\""+attributesCollection[i].name+"\" placeholder=\""+attributesCollection[i].name+"\" type=\"text\" /></td>";
+				html = html + "<td> &nbsp;&nbsp; <input name=\""+attributesCollection[i+1].name+"\" placeholder=\""+attributesCollection[i+1].name+"\" type=\"text\" /></td>";
+				html = html + "</tr>";
+			}
+			document.getElementById("form").innerHTML = html;
+			
+			
+			var quill = new Quill('.result', {
+				theme: 'snow'
+			  });
+			
+			
+			$("[name='Git URL']").keyup(function(){
+				
+				$.ajax(function(){
+				
+				
+					
+				
+				})
+			})
+			
+			
+			$("button").click(function(){
+			
+				$.ajax({
+				
+					url : "generateScript.php",
+					
+					method : "POST",
+					
+					data :{
+						
+						projectName : $("[name='Project Name']").val(),
+						releaseNo : $("[name='Release No']").val(),
+						projectManager : $("[name='Project Manager']").val(),
+						giturl : $("[name='Git URL']").val(),
+						branch : $("[name='Branch']").val(),
+						email : $("[name='Email']").val(),
+						emailSubject : $("[name='Email Subject']").val(),
+						emailBody : $("[name='Email Body']").val()
+					},
+					
+					success:function(data){
+					
+						$(".result").html(data);
+					}
+				
+				})
+			
+			})
+			
+		})();
+		
+		</script>
+	
+	</body>
+</html>

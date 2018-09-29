@@ -1,0 +1,157 @@
+<html>
+
+	<head>
+		<title> Stages </title>
+		<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			
+			
+		</style>
+	</head>
+	
+	<body>
+		
+		<div class="container">
+			<div class="header">
+				
+				<div class="logo">
+					Groovy Script <br/> Generator
+				</div>
+				
+			</div>
+			
+			<div class="mainarea">
+				
+				<div class="rightside">
+					
+					<div class="hierarchyheading">
+						
+						Stages 
+					</div>
+					
+					<div class="hierarchy">
+						
+						<center> <small> No Stages Are There Currently </small> </center>
+						
+					</div>
+					
+				</div>
+				
+				<div class="leftside">
+					
+					<div class="operationarea"  style="overflow:auto;height:550px">
+						
+						<div class="msgarea success" style="display:none">
+							One Stage Added Successfully
+						</div>
+
+						<div class="fromarea">
+
+							<input type="radio" name="scripttype" id="jenkins" value="jenkins" checked> &nbsp;Jenkins Script
+							&nbsp; &nbsp; 
+							<input type="radio" name="scripttype" value="ansible" id="ansible"> &nbsp;Ansible Script
+						</div>
+
+						<div class="fromarea">
+
+							<div class="addstagesection">
+
+								Generate Script For : <br/><br/>
+								<div id="predefinedstages"></div>
+
+							</div>
+
+						</div>
+						
+						<div class="fromarea">	
+							
+							<button class="btn addstagebtn" id="addcustomstage" style="float:right"> Add Custom Stage </button>
+							
+							<div class="addstagesection" id="adcustomstagesection" style="display:none">
+								
+								Add Stage Name : 
+								<input class="addstageinput" id="stagename" type="text">
+								&nbsp; 
+								<button class="btn" id="addstage" > Ok </button>
+								
+								<!--<button class="btn" style="float:right"> Add Step With Stage</button>-->
+								<div style="margin-top:12px;">
+									
+									Select Operation Name : 
+									<select class="operations" id="operations">
+									</select>
+
+								</div>
+								
+							</div>
+							
+							<div class="stagedetailsection">
+
+								<div>
+									<b>Fill Up The Details : </b>
+									<br/><br/>
+								</div>
+								
+								<div class="fromsection">
+									
+								</div>
+
+								<div style="margin-top:12px;">
+									<table style="width:100%">
+										<tr>
+											<!--<td>
+													<b> If Error : </b> 
+													<input type="Checkbox" class="sendemail errorhandler" value="emailext body: 'asass', subject: 'asas', to: 'asasa'"> Send Email &nbsp; 
+													<input type="Checkbox" class="showinlog errorhandler" value="echo e.getMessage()"> Show in log
+											</td>-->
+										</tr>
+										<tr>
+											<td>
+												<center> 
+													<button class="btn addStep"> Add </button> 
+												</center> 
+											</td>
+										</tr>
+									</table>
+								</div>
+									
+								
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="mostleftside">
+				
+					<div id="copy" style="border-bottom:1px solid black;padding-bottom:3px">
+						
+						<center>
+							<button id="copybtn" style="padding:3px;border:1px solid black;background-color:white">
+								Copy Script To Clipboard
+							</button>
+						</center>
+					</div>
+
+					<hr />
+					
+					<div id="code">
+					
+					</div>
+					
+				</div>
+				
+			</div>
+			</div>
+	
+	</body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="config.js"></script>
+	<script src="stages.js"></script>
+
+</html>

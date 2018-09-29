@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title> Deployment Script Generator </title>
+		
+		<style>
+		#form{
+			
+			width:60%;
+			margin:auto;
+			font-family:sans-serif;
+		}
+		
+		#form td:nth-child(even){
+			  padding-left : 15px;
+		}
+		
+		#form input{
+			
+			border : 2px solid #f2f3f6;
+			border-radius: 2px;
+			padding:3px;
+			width:100%;
+		}
+		
+		button {
+			
+			background-color:#007bff;
+			color:white;
+			border-radius:2px;
+			border:0px solid white;
+			padding:3px
+		}
+		</style>
+	</head>
+	
+	<body>
+	
+		<table id="form">
+			
+		</table>
+		
+		<br /><br />
+		<center>
+			<button> Generate Script </button>
+		</center>
+		
+		<script>
+		
+		(function(){
+		
+		    console.log("Starting");
+		
+			var attributesCollection = [
+			
+				{"name" : "Project Name","type" : "text"},
+				{"name" : "Application","type" : "text"},
+				{"name" : "Release No","type" : "text"},
+				{"name" : "Project Manager","type" : "text"},
+				{"name" : "Git URL","type" : "text"},
+				{"name" : "Java Version","type" : "text"},
+				{"name" : "Maven Version","type" : "text"},
+				{"name" : "Goals","type" : "text"}
+			];
+			
+			var html = "";
+			for(var i=0;i<attributesCollection.length;i=i+2)
+			{
+				html = html + "<tr>";
+				html = html + "<td><b> "+attributesCollection[i].name+" </b></td>";
+				html = html + "<td><b> "+attributesCollection[i+1].name+" </b></td>";
+				html = html + "</tr>";
+				
+				html = html + "<tr>";
+				html = html + "<td> &nbsp;&nbsp; <input placeholder=\""+attributesCollection[i].name+"\" type=\"text\" /></td>";
+				html = html + "<td> &nbsp;&nbsp; <input placeholder=\""+attributesCollection[i+1].name+"\" type=\"text\" /></td>";
+				html = html + "</tr>";
+			}
+			document.getElementById("form").innerHTML = html;
+			
+		})();
+		
+		</script>
+	
+	</body>
+</html>

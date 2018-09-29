@@ -1,0 +1,176 @@
+*{
+    
+    margin : 0;
+    padding:0;
+    border:0;
+    font-family:sans-serif;
+    font-size:12px;
+}
+
+.container{
+    
+    width:100%;
+    height:700px;
+}
+
+.header{
+    
+    margin-top:0;
+    background-color:#000000e0;
+    height : 10%;
+    width:100%;
+    border-bottom:2px solid white;
+}
+
+.mainarea{
+    
+    height: 90%;
+    width:100%;
+}
+
+.rightside{
+    
+    float:left;
+    height:100%;
+    width:20%;
+    background:#000000e0;
+}
+
+.leftside{
+
+    float:left;
+    height:100%;
+    width:57%;
+    padding:8px;
+}
+
+.mostleftside{
+
+    float:left;
+    height:100%;
+    width:18%;
+    padding:8px;
+    border:1px solid black;
+    overflow:auto;
+}
+
+.btn{
+    
+    border:1px solid black;
+    background: white;
+    border-radius:3px;
+    padding:4px;
+}
+
+.operationarea{
+    
+    padding:3px;
+}
+
+.msgarea{
+    
+    padding:2px;
+    width:95%;
+    font-weight:bold;
+}
+
+.success{
+
+    border:2px solid green;
+    background:lightgreen;
+    color:green;
+}
+
+.error{
+
+    border:2px solid red;
+    background:#be8f8f;
+    color:red;
+}
+
+.fromarea{
+    
+    margin:auto;
+    padding:8px;
+    border:1px solid black;
+    margin-top:8px;
+}
+
+.addstageinput{
+    
+    border-top: 0;
+    border-left:0;
+    border-right:0;
+    border-bottom:1px solid black;
+    width:250px;
+    padding:3px;
+}
+
+.stagedetailsection{
+    
+    margin-top:12px;
+}
+
+.operations{
+    
+    padding:3px;
+    width:250px;
+    border:1px solid black;
+    border-radius:3px;
+    background:white;
+}
+
+.fromsection{
+    
+    margin:auto;
+    margin-top:8px;
+}
+
+.frminput{
+    
+    padding:3px;
+    border:1px solid black;
+}
+
+.hierarchyheading{
+    
+    height:30px;
+    width:100%;
+    font-size:22px;
+    color:white;
+    text-align:center;
+    vertical-align: center;
+    padding-top:8px;
+}
+
+.hierarchy{
+    
+    border-top : 1px solid white;
+    margin-top:12px;
+    color:white;
+    padding:8px;
+}
+
+.stage{
+    
+    background-color:gray;
+    padding:3px;
+    cursor:pointer;
+}
+
+.step{
+    
+    background-color:#4b5846;
+    padding-top:3px;
+    cursor:pointer;
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+    padding:3px;
+    border-right:1px solid white;
+    width:19%;
+    height:100%;
+    font-family: 'Kavivanar', cursive;
+}
