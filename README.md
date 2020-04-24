@@ -10,7 +10,7 @@ standard
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
  
 ## Screenshots
-(https://github.com/kousik19/jenkins_script_generator/blob/master/ToolScreenShot2.png)
+[![screenshot](https://github.com/kousik19/jenkins_script_generator/blob/master/ToolScreenShot2.png)]
 
 ## Features
 Simple select the stages and provide necessary information to auto generate groovy script for jenkins deployment automation.
